@@ -147,9 +147,16 @@
           </div>
           <div class="modal-body">
              <p>Are you sure you want to delete employee {{deleteEmployee?.name}}?</p>
-             <div class="modal-footer">
+             <!--div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
                 <button (click)="deleteEmployeeById(deleteEmployee?.id)" class="btn btn-danger" data-dismiss="modal">Yes</button>
+             </div-->
+             <div id="delete-footer">
+               <form>
+                  <label for="verify">Please type <strong>{{deleteEmployee?.name}}</strong></label>
+                  <input type="search" #verify="ngModel" ngModel name="verify" id="searchName" class="form-control mr-sm-2" placeholder="">
+                  <button (click)="deleteEmployeeById(deleteEmployee?.id)" [disabled]="verify.value !== deleteEmployee?.name" class="btn btn-danger" data-dismiss="modal">I understand this is irreversible, delete {{deleteEmployee?.name}}</button>
+               </form>
              </div>
           </div>
        </div>
