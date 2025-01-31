@@ -35,8 +35,6 @@ export class AppComponent implements OnInit {
     document.getElementById('add-employee-form')?.click();
     this.employeeService.addEmployee(addForm.value).subscribe({
       next: (response: Employee) => {
-        console.log(response);
-        //this.employees.push(response);
         this.getAllEmployees();
       },
       error: (error: HttpErrorResponse) => {
@@ -49,8 +47,6 @@ export class AppComponent implements OnInit {
   public updateEmployee(employee: Employee): void {
     this.employeeService.updateEmployee(employee).subscribe({
       next: (response: Employee) => {
-        console.log(response);
-        //this.employees.push(response);
         this.getAllEmployees();
       },
       error: (error: HttpErrorResponse) => {
@@ -63,7 +59,6 @@ export class AppComponent implements OnInit {
     if (employeeId !== null && employeeId !== undefined) {
       this.employeeService.deleteEmployeeById(employeeId).subscribe({
         next: (response: void) => {
-          console.log(response);
           this.getAllEmployees();
         },
         error: (error: HttpErrorResponse) => {
@@ -74,7 +69,6 @@ export class AppComponent implements OnInit {
   }
 
   public searchEmployees(key: string): void {
-    console.log(key);
     const results: Employee[] = [];
     for (const employee of this.employees) {
       if (employee.name.toLowerCase().indexOf(key.toLowerCase()) !== -1

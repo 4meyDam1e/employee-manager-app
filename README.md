@@ -1,19 +1,14 @@
-# Employee Manager App
+# Employee Manager 🚀
 
-### Overview:
-A fullstack Employee Manager App that allows users to add, edit, delete and filter/search employees.
+## Description
+A full-stack CRUD application for managing employees.
+Also check out the [backend](https://github.com/4meyDam1e/employee-manager-api)!
 
-### Backend:
-See https://github.com/4meyDam1e/employee-manager-api.
+## Features
+- Create, edit and delete employees
+- Search for employees
 
-### Frontend Technologies Used:
-- TypeScript
-- Angular
+## Tech Stack (frontend) 🛠️
+- Angular/TypeScript
+- HTML/CSS
 - Bootstrap
-- HTML
-- CSS
-- Heroku (for deploying, see https://fullstack-employee-manager-app.herokuapp.com/)
-
-### Tutorials:
-- Development - https://www.youtube.com/watch?v=Gx4iBLKLVHk
-- Deployment - https://www.youtube.com/watch?v=y_idn12FB18&t=44s&ab_channel=ProgrammingTechie
